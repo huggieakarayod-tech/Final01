@@ -139,5 +139,11 @@ public class PlayerMovement : MonoBehaviour
             );
         }
     }
+
+    public void SetCharacterModel(Transform newModel)
+    {
+        characterModel = newModel;
+        animator = newModel.GetComponentInChildren<Animator>();
+    }
 }
 

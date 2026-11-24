@@ -1,0 +1,55 @@
+fileFormatVersion: 2
+guid: cbc55c38f4e3944f2ddec0fe51eb3c73
+ModelImporter:
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: chicken_mat
+    second: {fileID: 2100000, guid: 6ae17bc6884d9d7e967222ea2432552b, type: 2}
+  serializedVersion: 24501
+  animations:
+    animationCompression: 0
+    clipAnimations:
+    - serializedVersion: 16
+      name: Idle
+      takeName: Chicken|chicken_Idle
+      internalID: 30761387
+      firstFrame: 0
+      lastFrame: 60
+      wrapMode: 2
+      loopTime: 1
+    - serializedVersion: 16
+      name: Walk
+      takeName: Chicken|chicken_Walk
+      internalID: 30821537
+      firstFrame: 0
+      lastFrame: 24
+      wrapMode: 2
+      loopTime: 1
+    - serializedVersion: 16
+      name: Fly
+      takeName: Chicken|chicken_Fly
+      internalID: 30889976
+      firstFrame: 0
+      lastFrame: 16
+      wrapMode: 2
+      loopTime: 1
+    - serializedVersion: 16
+      name: Peck
+      takeName: Chicken|chicken_Peck
+      internalID: 30944910
+      firstFrame: 0
+      lastFrame: 48
+      wrapMode: 2
+      loopTime: 1
+  importAnimation: 1
+  animationType: 2
+  avatarSetup: 1
+AssetOrigin:
+  serializedVersion: 1
+  productId: 418282
+  packageName: Farm Life Lite | Free Animated Low Poly Farm Animals | Chicken & Goat
+  packageVersion: 1.0.0
+  assetPath: Assets/Backrock/FarmLife/Chicken/Chicken.fbx
+  uploadId: 1048592

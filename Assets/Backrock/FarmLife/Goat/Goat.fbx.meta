@@ -1,0 +1,63 @@
+fileFormatVersion: 2
+guid: 9abbb0d5ad062fd903a03c132a787035
+ModelImporter:
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: goat_mat
+    second: {fileID: 2100000, guid: aad4b826189449c881fc9bece988829f, type: 2}
+  serializedVersion: 24501
+  animations:
+    animationCompression: 0
+    clipAnimations:
+    - serializedVersion: 16
+      name: Idle
+      takeName: Goat|goat_Idle
+      internalID: 30811996
+      firstFrame: 0
+      lastFrame: 72
+      wrapMode: 2
+      loopTime: 1
+    - serializedVersion: 16
+      name: Walk
+      takeName: Goat|goat_Walk
+      internalID: 30180109
+      firstFrame: 0
+      lastFrame: 32
+      wrapMode: 2
+      loopTime: 1
+    - serializedVersion: 16
+      name: Run
+      takeName: Goat|goat_Run
+      internalID: 30420544
+      firstFrame: 0
+      lastFrame: 18
+      wrapMode: 2
+      loopTime: 1
+    - serializedVersion: 16
+      name: Eat
+      takeName: Goat|goat_Eat
+      internalID: 30008567
+      firstFrame: 0
+      lastFrame: 71
+      wrapMode: 2
+      loopTime: 1
+    - serializedVersion: 16
+      name: Death
+      takeName: Goat|goat_Death
+      internalID: 30967311
+      firstFrame: 0
+      lastFrame: 53
+      wrapMode: 1
+      loopTime: 0
+  importAnimation: 1
+  animationType: 2
+  avatarSetup: 1
+AssetOrigin:
+  serializedVersion: 1
+  productId: 418282
+  packageName: Farm Life Lite | Free Animated Low Poly Farm Animals | Chicken & Goat
+  packageVersion: 1.0.0
+  assetPath: Assets/Backrock/FarmLife/Goat/Goat.fbx
+  uploadId: 1048592

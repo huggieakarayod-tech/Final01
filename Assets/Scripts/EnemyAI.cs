@@ -1,8 +1,12 @@
 
 using UnityEngine;
 
+
 public class EnemyAI : MonoBehaviour
 {
+    private Animator animator;
+    private float animationSpeed;
+
     public enum EnemyState
     {
         Roaming,
@@ -56,6 +60,8 @@ public class EnemyAI : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody>();
+
+        animator = GetComponentInChildren<Animator>();
 
         startingPosition = transform.position;
 
@@ -174,6 +180,8 @@ public class EnemyAI : MonoBehaviour
 
     void FixedUpdate()
     {
+        animationSpeed = 0f;
+
         switch (currentState)
         {
             case EnemyState.Roaming:
@@ -196,6 +204,8 @@ public class EnemyAI : MonoBehaviour
 
                 break;
         }
+
+        UpdateAnimation();
     }
 
     void UpdateRoaming()
@@ -234,6 +244,8 @@ public class EnemyAI : MonoBehaviour
             return;
 
         direction.Normalize();
+
+        animationSpeed = speed;
 
         rb.MovePosition(
             rb.position + direction * speed * Time.fixedDeltaTime
@@ -291,6 +303,9 @@ public class EnemyAI : MonoBehaviour
         currentState = EnemyState.Attacking;
         stateTimer = attackDuration;
         hasHitPlayer = false;
+
+        if (animator != null)
+            animator.SetTrigger("Attack");
     }
 
     void CheckAttackHitbox()
@@ -341,5 +356,13 @@ public class EnemyAI : MonoBehaviour
             0f,
             randomPoint.y
         );
+    }
+
+    void UpdateAnimation()
+    {
+        if (animator == null)
+            return;
+
+        animator.SetFloat("Speed", animationSpeed);
     }
 }

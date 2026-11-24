@@ -17,6 +17,8 @@ public class PlayerHealth : MonoBehaviour
     [Header("Testing")]
     public int testDamage = 3;
 
+    private ChickenTransformation chickenTransformation;
+
     void Start()
     {
         currentHealth = maxHealth;
@@ -26,6 +28,8 @@ public class PlayerHealth : MonoBehaviour
         rb = GetComponent<Rigidbody>();
 
         Debug.Log("Player HP: " + currentHealth + "/" + maxHealth);
+
+        chickenTransformation = GetComponent<ChickenTransformation>();
     }
 
     void Update()
@@ -39,8 +43,14 @@ public class PlayerHealth : MonoBehaviour
 
     public void TakeDamage(int damage)
     {
+
         if (isDead)
             return;
+
+        if (chickenTransformation != null && chickenTransformation.IsChicken())
+        {
+            damage = 1;
+        }
 
         currentHealth -= damage;
         currentHealth = Mathf.Max(currentHealth, 0);
@@ -49,6 +59,12 @@ public class PlayerHealth : MonoBehaviour
 
         if (currentHealth <= 0)
         {
+            if (chickenTransformation != null &&
+                chickenTransformation.IsChicken())
+            {
+                chickenTransformation.ReturnToHuman();
+            }
+
             Die();
         }
         else
@@ -95,6 +111,12 @@ public class PlayerHealth : MonoBehaviour
         currentHealth = Mathf.Min(currentHealth, maxHealth);
 
         Debug.Log("Player healed! HP: " + currentHealth + "/" + maxHealth);
+    }
+
+    public void HealByPercentage(float percentage)
+    {
+        int healAmount = Mathf.CeilToInt(maxHealth * percentage);
+        Heal(healAmount);
     }
 
     public int GetCurrentHealth()

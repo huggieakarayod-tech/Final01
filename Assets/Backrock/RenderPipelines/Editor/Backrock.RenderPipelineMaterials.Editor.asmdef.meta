@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: f78644186c3e5097e3cd1a0ab2a1ea1b
+AssemblyDefinitionImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 418282
+  packageName: Farm Life Lite | Free Animated Low Poly Farm Animals | Chicken & Goat
+  packageVersion: 1.0.0
+  assetPath: Assets/Backrock/RenderPipelines/Editor/Backrock.RenderPipelineMaterials.Editor.asmdef
+  uploadId: 1048592
